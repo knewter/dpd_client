@@ -1,14 +1,18 @@
 defmodule DpdClient.DPD do
   def storefronts(username, password) do
-    get("/storefronts", username, password) |> decode_list_as(Storefront)
+    get_and_decode("/storefronts", username, password)
   end
 
-  defp decode_list_as(_string, _record) do
-    []
+  def subscribers(storefront_id, username, password) do
+    get_and_decode("/storefronts/#{storefront_id}/subscribers", username, password)
+  end
+
+  defp get_and_decode(endpoint, username, password) do
+    get(endpoint, username, password) |> JSON.decode!
   end
 
   defp get(endpoint, username, password) do
-    {:ok, 200, _headers, client} = :hackney.request(:get, url_for(endpoint), headers(username, password))
+    {:ok, 200, _headers, client} = :hackney.request(:get, url_for(endpoint), [], "", options(username, password))
     {:ok, body, _client} = :hackney.body(client)
     body
   end
@@ -21,7 +25,7 @@ defmodule DpdClient.DPD do
     "https://api.getdpd.com/v2/"
   end
 
-  defp headers(username, password) do
-    [ basic_auth: { String.to_char_list!(username), String.to_char_list!(password) }]
+  defp options(username, password) do
+    [ basic_auth: { username, password }]
   end
 end

@@ -26,7 +26,8 @@ defmodule DpdClient.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      {:hackney, github: "benoitc/hackney"}
+      {:hackney, github: "benoitc/hackney"},
+      {:jazz, github: "meh/jazz"}
     ]
   end
 end
