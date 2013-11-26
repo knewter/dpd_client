@@ -1,4 +1,5 @@
 defmodule DpdClient.DPD do
+  # Public API
   def storefronts(username, password) do
     get_and_decode("/storefronts", username, password)
   end
@@ -6,6 +7,8 @@ defmodule DpdClient.DPD do
   def subscribers(storefront_id, username, password) do
     get_and_decode("/storefronts/#{storefront_id}/subscribers", username, password)
   end
+
+  ### PRIVATE BITS DOWN BELOW
 
   defp get_and_decode(endpoint, username, password) do
     get(endpoint, username, password) |> JSON.decode!
