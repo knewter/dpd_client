@@ -1,4 +1,5 @@
 [ "dispcount": {:git, "https://github.com/ferd/dispcount.git", "8421fa18d9b5902328c338c331c8a193b8ddb3d2", [{:ref, "1.0.0"}]},
-  "hackney": {:git, "git://github.com/benoitc/hackney.git", "0eeef2d26632e14c9fa1c7bcf644ce5e85de07a8", []},
-  "jazz": {:git, "git://github.com/meh/jazz.git", "daa9bd04aed744efc51a048fd7527c4733832ad9", []},
-  "mimetypes": {:git, "https://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [{:ref, "master"}]} ]
+  "hackney": {:git, "git://github.com/benoitc/hackney.git", "7f2a0b5996313d930277786e7ff5d538e9346547", []},
+  "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [{:tag, "0.2.2"}]},
+  "jazz": {:git, "git://github.com/meh/jazz.git", "4756dda14295116dd5a790ea3030b5c3b1181859", []},
+  "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [{:ref, "master"}]} ]

@@ -16,7 +16,7 @@ defmodule DpdClient.DPD do
 
   defp get(endpoint, username, password) do
     {:ok, 200, _headers, client} = :hackney.request(:get, url_for(endpoint), [], "", options(username, password))
-    {:ok, body, _client} = :hackney.body(client)
+    {:ok, body} = :hackney.body(client)
     body
   end
 
