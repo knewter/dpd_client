@@ -1,6 +1,4 @@
-%{"dispcount": {:git, "https://github.com/ferd/dispcount.git", "8421fa18d9b5902328c338c331c8a193b8ddb3d2", [ref: "1.0.0"]},
-  "hackney": {:git, "git://github.com/benoitc/hackney.git", "e18bdd2f68840c8fddd77875b06079087290e5cc", []},
+%{"hackney": {:git, "git://github.com/benoitc/hackney.git", "e18bdd2f68840c8fddd77875b06079087290e5cc", []},
   "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "48a5a3fc64892c95e4e3efdd464f26ca5683d2f9", [tag: "0.3.0"]},
   "idna": {:git, "git://github.com/benoitc/erlang-idna.git", "21aa158b7f36bf2a000f12fe40d7f21eece9cf65", [tag: "hackney-0.11.2"]},
-  "jazz": {:git, "git://github.com/meh/jazz.git", "24b6eedb87aff6e97c5116f94d48476acb46dffe", []},
-  "mimetypes": {:git, "https://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]}}
+  "jazz": {:git, "git://github.com/meh/jazz.git", "24b6eedb87aff6e97c5116f94d48476acb46dffe", []}}
