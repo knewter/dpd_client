@@ -3,7 +3,15 @@ defmodule DpdClient.Mixfile do
 
   def project do
     [ app: :dpd_client,
-      version: "0.0.2",
+      version: "0.0.3",
+      description: """
+      `dpd_client` is an API client for the DPD service.  It only supports a few of the API's endpoints at present.
+      """,
+      contributors: ["Josh Adams"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub repository" => "http://github.com/knewter/dpd_client"
+      },
       deps: deps ]
   end
 
