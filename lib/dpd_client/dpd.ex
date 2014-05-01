@@ -1,4 +1,6 @@
 defmodule DpdClient.DPD do
+  use Jazz
+
   # Public API
   def storefronts(username, password) do
     get_and_decode("storefronts", username, password)
