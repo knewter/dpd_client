@@ -34,7 +34,7 @@ defmodule DpdClient.Mixfile do
   defp deps do
     [
       {:hackney, github: "benoitc/hackney"},
-      {:jazz, github: "meh/jazz"}
+      {:jazz, "~> 0.1.2"}
     ]
   end
 end
