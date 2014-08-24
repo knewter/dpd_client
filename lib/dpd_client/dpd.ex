@@ -1,6 +1,4 @@
 defmodule DpdClient.DPD do
-  use Jazz
-
   # Public API
   def storefronts(username, password) do
     get_and_decode("storefronts", username, password)
@@ -13,7 +11,7 @@ defmodule DpdClient.DPD do
   ### PRIVATE BITS DOWN BELOW
 
   defp get_and_decode(endpoint, username, password) do
-    get(endpoint, username, password) |> JSON.decode!
+    get(endpoint, username, password) |> Poison.Parser.parse!
   end
 
   defp get(endpoint, username, password) do

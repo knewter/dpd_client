@@ -7,11 +7,13 @@ defmodule DpdClient.Mixfile do
       description: """
       `dpd_client` is an API client for the DPD service.  It only supports a few of the API's endpoints at present.
       """,
-      contributors: ["Josh Adams"],
-      licenses: ["MIT"],
-      links: %{
-        "GitHub repository" => "http://github.com/knewter/dpd_client"
-      },
+      package: [
+        contributors: ["Josh Adams"],
+        licenses: ["MIT"],
+        links: %{
+          "GitHub repository" => "http://github.com/knewter/dpd_client"
+        },
+      ],
       deps: deps ]
   end
 
@@ -34,7 +36,7 @@ defmodule DpdClient.Mixfile do
   defp deps do
     [
       {:hackney, github: "benoitc/hackney"},
-      {:jazz, "~> 0.1.2"}
+      {:poison, "~> 1.0.1"}
     ]
   end
 end
