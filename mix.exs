@@ -3,7 +3,7 @@ defmodule DpdClient.Mixfile do
 
   def project do
     [ app: :dpd_client,
-      version: "0.0.4",
+      version: "0.0.5",
       description: """
       `dpd_client` is an API client for the DPD service.  It only supports a few of the API's endpoints at present.
       """,
